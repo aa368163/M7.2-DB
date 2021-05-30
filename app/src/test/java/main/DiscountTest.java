@@ -70,6 +70,8 @@ public class DiscountTest {
 	@DisplayName("是否為會員或團體")
 	@Nested
 	class MemberOrGroup {
+		String dateTime = "2021-05-26 週三 14:30:00";
+		
 		@Test
 		public void testIsMember() throws Throwable {
 			Identity identity = new Identity(25, true, false);
