@@ -138,7 +138,7 @@ public class DiscountTest {
 			Identity identity = new Identity(25, true, false);
 			Discount discount = new Discount(identity, "2021-05-26 週三 10:30:00");
 			Payment payment = new Payment(discount, "2021-05-26 週三 10:30:00");
-			Assertions.assertEquals(100, payment.getTotalCharge());
+			Assertions.assertEquals(100.0, payment.getTotalCharge());
 		}
 	}
 }
