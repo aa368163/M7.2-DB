@@ -92,12 +92,6 @@ public class DiscountTest {
 			}
 		}
 
-		@Test
-		public void testExtraWeek() throws Throwable {
-			Identity identity = new Identity(25, false, false);
-			Discount discount = new Discount(identity, "2021-05-24 週八 10:30:00");
-			Assertions.assertEquals(1, discount.getDiscount());
-		}
 	}
 
 	@DisplayName("是否為會員或團體")
@@ -133,6 +127,18 @@ public class DiscountTest {
 			identity.setGroup(true);
 			Discount discount = new Discount(identity, dateTime);
 			Assertions.assertEquals(0.7, discount.getDiscount());
+		}
+	}
+
+	@DisplayName("價錢")
+	@Nested
+	class Money {
+		@Test
+		public void testMoney() throws Throwable {
+			Identity identity = new Identity(25, true, false);
+			Discount discount = new Discount(identity, "2021-05-26 週三 10:30:00");
+			Payment payment = new Payment(identity, discount);
+			Assertions.assertEquals("Please pay $100.", payment.print());
 		}
 	}
 }
