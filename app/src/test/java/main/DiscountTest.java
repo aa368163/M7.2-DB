@@ -121,9 +121,9 @@ public class DiscountTest {
 		@Test
 		public void testSet() throws Throwable {
 			Identity identity = new Identity(25, true, false);
-			Identity.setAge(30);
-			Identity.setMember(false);
-			Identity.setGroup(true);
+			identity.setAge(30);
+			identity.setMember(false);
+			identity.setGroup(true);
 			Discount discount = new Discount(identity, dateTime);
 			Assertions.assertEquals(0.7, discount.getDiscount());
 		}
