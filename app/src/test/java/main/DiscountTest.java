@@ -66,4 +66,22 @@ public class DiscountTest {
 			}
 		}
 	}
+
+	@DisplayName("是否為會員或團體")
+	@Nested
+	class MemberOrGroup {
+		@Test
+		public void testIsMember() throws Throwable {
+			Identity identity = new Identity(25, true, false);
+			Discount discount = new Discount(identity, dateTime);
+			Assertions.assertEquals(0.5, discount.getDiscount());
+		}
+
+		@Test
+		public void testIsGroup() throws Throwable {
+			Identity identity = new Identity(25, false, true);
+			Discount discount = new Discount(identity, dateTime);
+			Assertions.assertEquals(0.7, discount.getDiscount());
+		}
+	}
 }
