@@ -91,6 +91,13 @@ public class DiscountTest {
 				Assertions.assertEquals("Business hours: 05:00-22:00", exception.getMessage());
 			}
 		}
+
+		@Test
+		public void testExtraWeek() throws Throwable {
+			Identity identity = new Identity(25, false, false);
+			Discount discount = new Discount(identity, "2021-05-26 週八 10:30:00");
+			Assertions.assertEquals(1, discount.getDiscount());
+		}
 	}
 
 	@DisplayName("是否為會員或團體")
