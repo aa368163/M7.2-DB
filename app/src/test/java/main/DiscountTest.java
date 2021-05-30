@@ -59,9 +59,8 @@ public class DiscountTest {
 		@Test
 		public void testNoBusiness() throws Throwable {
 			Identity identity = new Identity(25, false, false);
-			Discount discount = new Discount(identity, "2021-05-26 週三 04:30:00");
 			try {
-				new Discount(identity, dateTime);
+				Discount discount = new Discount(identity, "2021-05-26 週三 04:30:00");
 			} catch (Throwable exception) {
 				Assertions.assertEquals("Business hours: 05:00-22:00", exception.getMessage());
 			}
