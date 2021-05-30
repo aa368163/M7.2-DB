@@ -140,5 +140,13 @@ public class DiscountTest {
 			Payment payment = new Payment(discount, "2021-05-26 週三 10:30:00");
 			Assertions.assertEquals(100.0, payment.getTotalCharge());
 		}
+
+		@Test
+		public void testMoney_2() throws Throwable {
+			Identity identity = new Identity(25, false, false);
+			Discount discount = new Discount(identity, "2021-05-29 週六 10:30:00");
+			Payment payment = new Payment(discount, "2021-05-29 週六 10:30:00");
+			Assertions.assertEquals(250.0, payment.getTotalCharge());
+		}
 	}
 }
