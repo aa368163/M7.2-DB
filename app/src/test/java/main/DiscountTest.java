@@ -137,7 +137,7 @@ public class DiscountTest {
 		public void testMoney() throws Throwable {
 			Identity identity = new Identity(25, true, false);
 			Discount discount = new Discount(identity, "2021-05-26 週三 10:30:00");
-			Payment payment = new Payment(identity, discount);
+			Payment payment = new Payment(discount, "2021-05-26 週三 10:30:00");
 			Assertions.assertEquals("Please pay $100.", payment.print());
 		}
 	}
