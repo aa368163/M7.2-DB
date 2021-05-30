@@ -95,7 +95,7 @@ public class DiscountTest {
 		@Test
 		public void testExtraWeek() throws Throwable {
 			Identity identity = new Identity(25, false, false);
-			Discount discount = new Discount(identity, "2021-05-26 週八 10:30:00");
+			Discount discount = new Discount(identity, "2021-05-24 週八 10:30:00");
 			Assertions.assertEquals(1, discount.getDiscount());
 		}
 	}
