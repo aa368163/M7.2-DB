@@ -21,15 +21,15 @@ pipeline {
             }
         }
         stage('sonarqube-analysis') {
-            enviroment {
+            environment {
                 SONAR_TOKEN = credentials('sonarqube-token')
             }
             steps {
-                  ./gradlew sonarqube \
-                  -Dsonar.projectKey=swimming-pool \
-                  -Dsonar.host.url=http://140.134.26.54:10990 \
-                  -Dsonar.login=$SONAR_TOKEN
-
+                sh '''./gradlew sonarqube \
+                    -Dsonar.projectKey=swimming-pool \
+                    -Dsonar.host.url=http://140.134.26.54:10990 \
+                    -Dsonar.login=$SONAR_TOKEN
+                '''
             }
         }
     }
