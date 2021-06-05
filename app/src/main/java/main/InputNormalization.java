@@ -26,7 +26,7 @@ public class InputNormalization {
                     System.out.println(error);
                     method.invoke(null);
                 }
-                setDigital(number);
+                digital = setDigital(number);
                 break;
             case "String":
                 string = inputWord;
@@ -65,7 +65,7 @@ public class InputNormalization {
         return dateTime.split(" ")[1];
     }
 
-    public void setDigital(int number){
-        digital = number;
+    public int setDigital(int number){
+        return number;
     }
 }
