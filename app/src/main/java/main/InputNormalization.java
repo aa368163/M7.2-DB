@@ -43,7 +43,7 @@ public class InputNormalization {
                     }
                 } catch (IOException exception) {
                     System.out.println(error);
-                    logger.log(error);         
+                    logger.log("error");         
                     method.invoke(null);
                 }
                 break;
