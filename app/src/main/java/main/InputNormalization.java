@@ -4,6 +4,8 @@ import java.io.IOException;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.util.Scanner;
+import java.util.logging.Level;
+import java.util.logging.LogManager;
 import java.util.logging.Logger;
 
 public class InputNormalization {
@@ -43,7 +45,7 @@ public class InputNormalization {
                     }
                 } catch (IOException exception) {
                     System.out.println(error);
-                    logger.log("error");         
+                    logger.warning("警示資訊");    
                     method.invoke(null);
                 }
                 break;
