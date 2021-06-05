@@ -44,4 +44,8 @@ public class Discount {
 	public double getDiscount() {
 		return discount;
 	}
+
+	public void IdentityException throws Exception {
+ 		doTheThing();  // this method throws Exception
+}
 }
