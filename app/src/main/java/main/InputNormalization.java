@@ -26,7 +26,7 @@ public class InputNormalization {
                     System.out.println(error);
                     method.invoke(null);
                 }
-                digital = number;
+                setDigital(number);
                 break;
             case "String":
                 string = inputWord;
@@ -63,5 +63,9 @@ public class InputNormalization {
 
     public static String extractWeek(String dateTime) {
         return dateTime.split(" ")[1];
+    }
+
+    public void setDigital(int number){
+        digital = number;
     }
 }
