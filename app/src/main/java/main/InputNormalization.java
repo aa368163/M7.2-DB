@@ -45,7 +45,7 @@ public class InputNormalization {
                     }
                 } catch (IOException exception) {
                     System.out.println(error);
-                    logger.warning("警示資訊");    
+                    logger.log("警示資訊");    
                     method.invoke(null);
                 }
                 break;
