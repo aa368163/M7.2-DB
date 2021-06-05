@@ -9,7 +9,7 @@ public class InputNormalization {
 
     public static final String string;
     public static final boolean bool;
-    public static final int digital;
+    public static final int digital;/////////
 
     public static void regularize(Method method, String type, String tip, String error)
            throws InvocationTargetException, IllegalAccessException {
