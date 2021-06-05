@@ -7,7 +7,7 @@ public class Payment {
     public static int weekendCharge = 250;
     private int money;
     private double totalCharge;
-    Logger logger = Logger.getLogger("InputNormalization");
+    Logger logger = Logger.getLogger("Payment");
 
     public Payment(Discount discount, String dateTime) {
 
