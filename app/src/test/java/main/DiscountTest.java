@@ -64,7 +64,7 @@ public class DiscountTest {
 
 		@Test
 		void testNoBusiness() throws Throwable {
-			Identity identity = new Identity(25, false, false);
+			Identity identity = new Identity(25, true, false);
 			try {
 				Discount discount = new Discount(identity, "2021-05-26 週三 04:30:00");
 			} catch (Throwable exception) {
@@ -74,7 +74,7 @@ public class DiscountTest {
 
 		@Test
 		void testNoBusiness_2() throws Throwable {
-			Identity identity = new Identity(25, false, false);
+			Identity identity = new Identity(25, false, true);
 			try {
 				Discount discount = new Discount(identity, "2021-05-26 週三 22:10:00");
 			} catch (Throwable exception) {
