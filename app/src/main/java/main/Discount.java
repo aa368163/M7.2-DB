@@ -4,7 +4,7 @@ public class Discount {
 	private Identity identity;
 	private int hour;
 	private int min;
-	private double money_discount = 0;
+	private double moneyDiscount = 0;
 
 	public Discount(Identity identity, String dateTime) throws Throwable {
 
@@ -29,19 +29,19 @@ public class Discount {
 
 	private void queryDiscount(Identity identity, int hour) {
 		if (identity.isMember()) {
-			money_discount = 0.5;
+			moneyDiscount = 0.5;
 		} else if (identity.isGroup()) {
-			money_discount = 0.7;
+			moneyDiscount = 0.7;
 		} else if (12 > identity.getAge() || identity.getAge() >= 60) {
-			money_discount = 0.8;
+			moneyDiscount = 0.8;
 		} else if (5 <= hour && hour < 7) {
-			money_discount = 0.8;
+			moneyDiscount = 0.8;
 		} else {
-			money_discount = 1;
+			moneyDiscount = 1;
 		}
 	}
 
 	public double getDiscount() {
-		return money_discount;
+		return moneyDiscount;
 	}
 }
