@@ -7,7 +7,6 @@ import java.util.Scanner;
 import java.util.logging.Level;
 import java.util.logging.LogManager;
 import java.util.logging.Logger;
-import org.apache.log4j.Logger;
 
 public class InputNormalization {
 
@@ -45,7 +44,7 @@ public class InputNormalization {
                     }
                 } catch (IOException exception) {
                     System.out.println(error);
-                    LOG.info(error);
+                    logger.log("My Message");
                     method.invoke(null);
                 }
                 break;
