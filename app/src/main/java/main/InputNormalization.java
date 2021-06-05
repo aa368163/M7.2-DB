@@ -10,13 +10,13 @@ import java.util.logging.Logger;
 
 public class InputNormalization {
 
-    Logger logger = Logger.getLogger("InputNormalization");
     public static String string;
     public static boolean bool;
     public static int digital;
 
     public static void regularize(Method method, String type, String tip, String error)
            throws InvocationTargetException, IllegalAccessException {
+        Logger logger = Logger.getLogger("InputNormalization");
         System.out.println(tip);
         Scanner input = new Scanner(System.in);
         String inputWord = input.nextLine();
