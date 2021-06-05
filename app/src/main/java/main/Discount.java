@@ -6,7 +6,7 @@ public class Discount {
 	private int min;
 	private double discount = 0;
 
-	public Discount(Identity identity, String dateTime) throws IdentityException {
+	public Discount(Identity identity, String dateTime) throws Exception {
 
 		this.identity = identity;
 		this.hour = InputNormalization.extractHour(dateTime);
@@ -15,13 +15,13 @@ public class Discount {
 		checkException();
 	}
 
-	public void checkException() throws IdentityException {
+	public void checkException() throws Exception {
 		if (3 > identity.getAge()) {
-			throw new IdentityException("Your age is too young.");
+			throw new Exception("Your age is too young.");
 		} else if (identity.getAge() > 75) {
-			throw new IdentityException("Your age doesn't meet the requirements.");
+			throw new Exception("Your age doesn't meet the requirements.");
 		} else if ((5 > hour || hour > 22) || (hour == 22 && min > 0)) {
-			throw new IdentityException("Business hours: 05:00-22:00");
+			throw new Exception("Business hours: 05:00-22:00");
 		} else {
 			queryDiscount(identity, hour);
 		}
