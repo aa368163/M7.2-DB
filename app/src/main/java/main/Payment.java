@@ -34,7 +34,7 @@ public class Payment {
     }
 
     public void print() {
-        logger.info("Please pay $" + (int) totalCharge + ".");
+        logger.fine("Please pay $" + (int) totalCharge + ".");
     }
 
     public double getTotalCharge(){
