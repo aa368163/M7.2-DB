@@ -1,10 +1,13 @@
 package main;
 
+import java.util.logging.Logger;
+
 public class Payment {
     public static int weekdayCharge = 200;
     public static int weekendCharge = 250;
     private int money;
     private double totalCharge;
+    Logger logger = Logger.getLogger("InputNormalization");
 
     public Payment(Discount discount, String dateTime) {
 
@@ -31,7 +34,7 @@ public class Payment {
     }
 
     public void print() {
-        System.out.println("Please pay $" + (int) totalCharge + ".");
+        logger.info("Please pay $" + (int) totalCharge + ".");
     }
 
     public double getTotalCharge(){
