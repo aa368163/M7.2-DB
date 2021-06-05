@@ -22,7 +22,7 @@ public class InputNormalization {
                 try {
                     number = Integer.parseInt(inputWord);
                 } catch (NumberFormatException exception) {
-                    exception.printStackTrace();
+                    //exception.printStackTrace();
                     System.out.println(error);
                     method.invoke(null);
                 }
@@ -41,7 +41,7 @@ public class InputNormalization {
                         throw new IOException();
                     }
                 } catch (IOException exception) {
-                    exception.printStackTrace();
+                    //exception.printStackTrace();
                     System.out.println(error);
                     method.invoke(null);
                 }
