@@ -15,7 +15,7 @@ public class Discount {
 		checkException();
 	}
 
-	public void checkException() {
+	public void checkException() throws IdentityException{
 		if (3 > identity.getAge()) {
 			throw new IdentityException("Your age is too young.");
 		} else if (identity.getAge() > 75) {
