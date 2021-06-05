@@ -33,7 +33,7 @@ public class Discount {
 		} else if (identity.isGroup()) {
 			money_discount = 0.7;
 		} else if (12 > identity.getAge() || identity.getAge() >= 60) {
-			money_discountt = 0.8;
+			money_discount = 0.8;
 		} else if (5 <= hour && hour < 7) {
 			money_discount = 0.8;
 		} else {
@@ -42,6 +42,6 @@ public class Discount {
 	}
 
 	public double getDiscount() {
-		return discount;
+		return money_discount;
 	}
 }
