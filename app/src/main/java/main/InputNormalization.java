@@ -13,7 +13,7 @@ public class InputNormalization {
 
     public static void regularize(Method method, String type, String tip, String error)
            throws InvocationTargetException, IllegalAccessException {
-        System.out.println(tip);
+        logger.log(tip);
         Scanner input = new Scanner(System.in);
         String inputWord = input.nextLine();
         switch (type) {
@@ -23,7 +23,7 @@ public class InputNormalization {
                     number = Integer.parseInt(inputWord);
                 } catch (NumberFormatException exception) {
                     exception.printStackTrace();
-                    System.out.println(error);
+                    logger.log(error);
                     method.invoke(null);
                 }
                 digital = number;
