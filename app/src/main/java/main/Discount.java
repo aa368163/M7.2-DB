@@ -17,11 +17,11 @@ public class Discount {
 
 	public void checkException() {
 		if (3 > identity.getAge()) {
-			throw new MyOwnRuntimeException("Your age is too young.");
+			throw new Throwable("Your age is too young.");
 		} else if (identity.getAge() > 75) {
-			throw new MyOwnRuntimeException("Your age doesn't meet the requirements.");
+			throw new Throwable("Your age doesn't meet the requirements.");
 		} else if ((5 > hour || hour > 22) || (hour == 22 && min > 0)) {
-			throw new MyOwnRuntimeException("Business hours: 05:00-22:00");
+			throw new Throwable("Business hours: 05:00-22:00");
 		} else {
 			queryDiscount(identity, hour);
 		}
