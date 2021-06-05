@@ -47,5 +47,5 @@ public class Discount {
 
 	public void IdentityException throws Exception {
  		doTheThing();  // this method throws Exception
-}
+	}
 }
