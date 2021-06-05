@@ -7,7 +7,9 @@ import java.util.Scanner;
 
 public class InputNormalization {
 
-
+    public static String string;
+    public static boolean bool;
+    public static int digital;
 
     public static void regularize(Method method, String type, String tip, String error)
            throws InvocationTargetException, IllegalAccessException {
@@ -24,17 +26,17 @@ public class InputNormalization {
                     System.out.println(error);
                     method.invoke(null);
                 }
-                public static final int digital = number;
+                digital = number;
                 break;
             case "String":
-                public static final String string = inputWord;
+                string = inputWord;
                 break;
             case "boolean":
                 try {
                     if (inputWord.equalsIgnoreCase("Y")) {
-                        public static final boolean bool = true;
+                        bool = true;
                     } else if (inputWord.equalsIgnoreCase("N")) {
-                        public static final boolean bool = false;
+                        bool = false;
                     } else {
                         throw new IOException();
                     }
